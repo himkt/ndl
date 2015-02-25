@@ -9,10 +9,6 @@ Gem::Specification.new do |spec|
   spec.authors       = ["himkt"]
   spec.email         = ["s1311536@u.tsukuba.ac.jp"]
 
-  if spec.respond_to?(:metadata)
-    spec.metadata['allowed_push_host'] = "http://mygemserver.com"
-  end
-
   spec.summary       = %q{ndl tool}
   spec.description   = %q{easy tool to access ndl API}
   spec.homepage      = "https://github.com/himkt/ndl"
