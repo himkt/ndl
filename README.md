@@ -39,6 +39,8 @@ Or install it yourself as:
   - :isbn
   - :mediatype
 
+* please refer to [my repository](https://github.com/himkt/opensearch)
+
 ```ruby
 open_search = OpenSearch.new
 open_search.search(:title=>'a', :from=>'1111-11-11', :cnt=>2)
