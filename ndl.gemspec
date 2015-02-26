@@ -6,7 +6,7 @@ require 'ndl/version'
 Gem::Specification.new do |spec|
   spec.name          = "ndl"
   spec.version       = Ndl::VERSION
-  spec.authors       = ["himkt"]
+  spec.authors       = ["Makoto Hiramatsu"]
   spec.email         = ["s1311536@u.tsukuba.ac.jp"]
 
   spec.summary       = %q{ndl tool}

@@ -22,7 +22,27 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### OpenSearch
+
+* The following arguments are available
+  - :dpid
+  - :dpgroupid
+  - :any
+  - :title
+  - :creator
+  - :publisher
+  - :ndc
+  - :from
+  - :until
+  - :cnt
+  - :idx
+  - :isbn
+  - :mediatype
+
+```ruby
+open_search = OpenSearch.new
+open_search.search(:title=>'a', :from=>'1111-11-11', :cnt=>2)
+```
 
 ## Development
 
