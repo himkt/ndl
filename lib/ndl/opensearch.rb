@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'rss'
 
 module Ndl
   class OpenSearch
@@ -17,6 +18,22 @@ module Ndl
       # about 'open-uri', please refer to http://docs.ruby-lang.org/ja/2.1.0/library/open=2duri.html
       result = open(@url)
       return result
+    end
+    def parse(result)
+      parsed_result = Hash.new
+      doc = RSS::Parser.parse(result)
+      parsed_result[:hit] = doc.items.size
+      parsed_result[:item] = Array.new
+      doc.items.each do |item|
+        bibliography = Hash.new
+        bibliography[:dc_title] = item.dc_title
+        bibliography[:dc_creator] = item.dc_creator
+        bibliography[:guid] = item.guid.content
+        bibliography[:category] = item.category.content
+        bibliography[:dc_subject] = item.dc_subject if item.dc_subject.size == 3
+        parsed_result[:item].push(bibliography)
+      end
+      return parsed_result
     end
   end
 end
