@@ -30,7 +30,7 @@ module Ndl
         bibliography[:dc_creator] = item.dc_creator
         bibliography[:guid] = item.guid.content
         bibliography[:category] = item.category.content
-        bibliography[:dc_subject] = item.dc_subject if item.dc_subject.size == 3
+        bibliography[:dc_subject] = item.dc_subject if ((item.dc_subject != nil) && (item.dc_subject.size == 3))
         parsed_result[:item].push(bibliography)
       end
       return parsed_result

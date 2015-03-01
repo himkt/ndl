@@ -5,7 +5,8 @@ open_search = Ndl::OpenSearch.new
 
 
 # you can parse 'result' by using xml parser
-result = open_search.search(:title=>'a', :from=>'1111-11-11', :cnt=>2, :ndc=>100)
+#result = open_search.search(:title=>'a', :from=>'1111-11-11', :cnt=>2, :ndc=>100)
+result = open_search.search(:title=>'a', :from=>'1111-11-11', :cnt=>2, :ndc=>0)
 
 # parse return Hash include key, 'hit' and 'item'
 # hit is number of hit
