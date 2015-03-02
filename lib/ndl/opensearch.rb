@@ -35,5 +35,7 @@ module Ndl
       end
       return parsed_result
     end
+    def extended_search(*query)
+    end
   end
 end
